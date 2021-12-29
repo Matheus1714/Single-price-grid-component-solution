@@ -35,7 +35,7 @@ main{
 }
 
 .cards{
-    width: 800px;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -64,7 +64,7 @@ main{
 .card1 p{
     color: #bbbdcb;
     padding-top: 20px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bolder;
 }
 
@@ -100,7 +100,7 @@ main{
 }
 
 .card2 button{
-    width: 360px;
+    width: 100%;
     font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -134,11 +134,20 @@ main{
     color: #ffffffa1;
 }
 
-@media(max-width: 375px){
+@media(max-width: 700px){
     .cards{
         grid-template-columns: 1fr;
     }
     .card1{
         grid-column: 1;
+    }
+    .card2{
+        border-bottom-left-radius: 0;
+    }
+    .card3{
+        border-bottom-left-radius: 10px;
+    }
+    .main{
+        display: block;
     }
 }
