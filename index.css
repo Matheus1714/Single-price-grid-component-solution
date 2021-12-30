@@ -1,20 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Source+Sans+Pro&display=swap');
+
 :root{
     --cyan: hsl(179, 62%, 43%);
     --bright-yellow: hsl(71, 73%, 54%);
-    --back: #f0f0f0;
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
 }
 
 body, html{
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: var(--back);
+    background-color: var(--light-gray);
 }
 
 main{
@@ -35,7 +41,7 @@ main{
 }
 
 .cards{
-    width: 80%;
+    width: 55%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -55,27 +61,30 @@ main{
 .card1 h1{
     color: var(--cyan);
     padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .card1 h2{
     color: var(--bright-yellow);
+    font-weight: 700;
 }
 
 .card1 p{
-    color: #bbbdcb;
+    color: var(--grayish-blue);
     padding-top: 20px;
-    font-size: 18px;
-    font-weight: bolder;
 }
 
 .card2{
-    background-color: #2bb3b1;
+    background-color: var(--cyan);
     border-bottom-left-radius: 10px;
 }
 
 .card2 h2{
     color: #fff;
     padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .card2 .value{
@@ -86,28 +95,29 @@ main{
 
 .card2 span:nth-child(1){
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .card2 span:nth-child(2){
-    color: #ffffffa1;
-    padding-left: 20px;
+    color: var(--light-gray);
+    padding-left: 10px;
+    opacity: 0.5;
 }
 
 .card2 p{
-    color: #fff;
+    color: var(--light-gray);
     padding-bottom: 20px;
 }
 
 .card2 button{
     width: 100%;
-    font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     color: #fff;
     font-weight: bolder;
     background-color: var(--bright-yellow);
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
@@ -121,22 +131,30 @@ main{
 }
 
 .card3{
-    background-color: #4abebd;
+    background-color: var(--cyan);
+    opacity: 0.9;
+
     border-bottom-right-radius: 10px;
 }
 
 .card3 h2{
     color: #fff;
     padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .card3 p{
-    color: #ffffffa1;
+    color: var(--light-gray);
 }
 
 @media(max-width: 700px){
     .cards{
         grid-template-columns: 1fr;
+        width: 80%;
+    }
+    .card1, .card2, .card3{
+        max-width: 375px;
     }
     .card1{
         grid-column: 1;
@@ -147,7 +165,7 @@ main{
     .card3{
         border-bottom-left-radius: 10px;
     }
-    .main{
-        display: block;
+    .box{
+        height: 180%;
     }
 }
